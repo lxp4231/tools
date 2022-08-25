@@ -1,0 +1,145 @@
+<!-- 问题1-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>串口调试</title>
+</head>
+
+<body>
+    <button onclick="serial()">启动串口调试</button>
+    <input type="text" id="fs">
+</body>
+
+</html>
+<script src="./jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    $("#fs").focus();
+    // 1
+    async function serial() {
+        // 浏览器支持serial
+        if ('serial' in navigator) {
+            console.log('当前浏览器支持serial')
+            const port = await navigator.serial.requestPort()
+            await port.open({ baudRate: 9600 })
+            console.log("port的内容是：", port);
+            const reader = port.readable.getReader();
+            try {
+                // while(true){
+                const { value, done } = await reader.read();
+                if (done) {
+                    reader.releaseLock();
+                    // break;
+                }
+                if (value) {
+                    console.log("测试value的内容是", value);
+                    // 解码
+                    var weight = Uint8ArrayToString(value)
+                    console.log('weight', weight)
+                }
+                // }
+            } catch (error) {
+                console.error(error)
+            } finally {
+                reader.releaseLock();
+                console.log('允许稍后关闭串口。');
+                await readableStreamClosed.catch(() => { /* Ignore the error */ });
+                await port.close();
+            }
+        }
+    }
+    const Uint8ArrayToString = (fileData) => {
+        var dataString = "";
+        for (var i = 0; i < fileData.length; i++) {
+            dataString += String.fromCharCode(fileData[i]);
+        }
+        return dataString
+    }
+</script>
+
+<!-- 问题2-->
+<!-- <button onclick="serial()">启动串口调试</button>
+    <script type="text/javascript">
+  async function serial() {
+      // 浏览器支持serial
+      if ('serial' in navigator) {
+        // 获取用户之前授予该网站访问权限的所有串口
+        const ports = await navigator.serial.getPorts()
+        if (this.port !== null) {
+          if (ports.length > 0) {
+          // 已经连接过
+            this.port = ports[0]
+            this.open()
+            return
+          }
+          // 提示用户选择一个串口
+          this.port = await navigator.serial.requestPort()
+          this.open()
+        }
+      } else {
+        alert('你的浏览器不支持串口连接')
+      }
+    }
+    async function open() { // 打开串口
+      // 等待串口打开
+      await this.port.open({
+        baudRate: 9600, // 波特率
+        dataBits: 8, // 每帧的数据位数(7或8)
+        stopBits: 1, // 停止位数(1或2)
+        parity: 'none', // 校验模式，可以是none，偶数，奇数
+        flowControl: 'none' // 流控模式(none或hardware)。
+      })
+      console.log('串口打开成功', this.port)
+      if (this.port) {
+        await this.getWeight()
+      }
+    }
+     // 获取重量
+    async function getWeight() {
+      const _this = this
+      this.keepReading = true
+      if (this.port) {
+        this.reader = this.port.readable.getReader()
+        this.writer = this.port.writable.getWriter()
+        this.writeInt = setInterval(async() => {
+          const data = new Uint8Array([2, 111, 111, 111, 111, 111, 13])
+          await this.writer.write(data)
+        }, 200)
+        while (_this.port.readable && this.keepReading) {
+          try {
+            while (true) {
+              const { value, done } = await this.reader.read()
+              if (done) {
+                this.reader.releaseLock()
+                break
+              }
+              console.log('weight1',weight)
+              var weight = _this.Uint8ArrayToString(value.reverse())
+               console.log('weight2',weight)
+            }
+          } catch (error) {
+            console.error(error)
+          } finally {
+            // 允许稍后关闭串口。
+            this.reader.releaseLock()
+            this.writer.releaseLock()
+            console.log('允许稍后关闭串口。')
+          }
+        }
+        clearInterval(this.writeInt)
+        await this.port.close()
+      }
+    }
+    //  // 去皮 写入串口
+    // async function peel() {
+    //   if (this.port) {
+    //     const data = new Uint8Array([2, 11, 11, 11, 136, 111, 13])
+    //     await this.writer.write(data)
+    //     console.log('去皮操作')
+    //   } else {
+    //     this.serial()
+    //   }
+    // }
+    </script> -->
