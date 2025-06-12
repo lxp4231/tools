@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquid Glass UI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .glass-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .glass-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .glass-button.active {
+            background: rgba(255, 255, 255, 0.3);
+            color: #000;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-buttons">
+        <button class="glass-button active">按钮一</button>
+        <button class="glass-button">按钮二</button>
+        <button class="glass-button">按钮三</button>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.glass-button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

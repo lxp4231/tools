@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悬浮 + 挑逗 + 消失效果</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* position: absolute; */
+            /* top: 50%;
+            left: 50%; */
+            transform-origin: center;
+            transform: matrix(0.5, 0, 0, 0.5, 315, 161);
+            animation: floatEffect 5s ease-in-out infinite, blinkEffect 5s infinite;
+        }
+
+        /* 1. 漂浮路径：先下、再左、再上、再右 */
+        @keyframes floatEffect {
+            0% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(0px, 0px);
+            }
+
+            25% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(0px, 15px);
+            }
+
+            /* 下 */
+            50% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(-15px, 15px);
+            }
+
+            /* 左 */
+            75% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(-15px, -15px);
+            }
+
+            /* 上 */
+            100% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(0px, -15px);
+            }
+
+            /* 右 */
+        }
+
+        /* 2. 快速小幅度抖动 */
+        @keyframes teaseEffect {
+
+            0%,
+            100% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(0px, -15px);
+            }
+
+            20% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(3px, -15px);
+            }
+
+            40% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(-3px, -15px);
+            }
+
+            60% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(2px, -15px);
+            }
+
+            80% {
+                transform: matrix(0.5, 0, 0, 0.5, 315, 161) translate(-2px, -15px);
+            }
+        }
+
+        /* 3. 消失后再出现 */
+        @keyframes blinkEffect {
+
+            0%,
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* 添加挑逗效果 */
+        .box::after {
+            content: "";
+            display: block;
+            animation: teaseEffect 0.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>
