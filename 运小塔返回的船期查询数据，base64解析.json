@@ -1,0 +1,206 @@
+{
+    "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+    "parent_id": "a1e9016-7ee4-45c8-bbd3-f41618337ed9",
+    "message_id": "3e3e4e7a-bf53-4cd1-ad51-b9b3ddf794b4",
+    "message_content": "查询CNTAO/YEADE港口搜索结果：\n\n**2025-07-03（周四）**\n\n| 船公司 | 起运港       | 目的港 | 船名/航次      | 航次   | 预计离港时间（红色为当前周） | 预计到港时间 | 航程(天) | 中转/直达 | 备注       |\n|--------|--------------|--------|----------------|--------|------------------------------|--------------|----------|------------|------------|\n| CSL    | QINGDAO,SHANDONG | ADEN   | HMM BANGKOK    | 0123W  | <span style=\"color:red\">2025-07-03 04:00:00（当前周）</span> | 2025-08-03 00:00:00 | 31       | 直达       |            |\n\n**2025-07-04（周五）**\n\n| 船公司 | 起运港       | 目的港 | 船名/航次          | 航次   | 预计离港时间 | 预计到港时间 | 航程(天) | 中转/直达 | 备注       |\n|--------|--------------|--------|--------------------|--------|--------------|--------------|----------|------------|------------|\n| COSCO  | QINGDAO,SHANDONG | ADEN   | CSCL ARCTIC OCEAN | 055W   | 2025-07-04 03:00:00 | 2025-08-04 05:00:00 | 31       | 直达       |            |\n| CUL    | QINGDAO,SHANDONG | ADEN   | ASL HONG KONG     | 2523W  | 2025-07-04 05:00:00 | 2025-08-02 18:00:00 | 29       | 直达       |            |\n| PIL    | QINGDAO,SHANDONG | ADEN   | KOTA CANTIK       | 0090W  | 2025-07-04 05:00:00 | 2025-07-30 00:00:00 | 26       | 直达       |            |\n| PIL    | QINGDAO,SHANDONG | ADEN   | KOTA CANTIK       | 0090W  | 2025-07-04 05:00:00 | 2025-08-18 00:00:00 | 45       | 直达       |            |\n\n**2025-07-05（周六）**\n\n| 船公司 | 起运港       | 目的港 | 船名/航次       | 航次      | 预计离港时间 | 预计到港时间 | 航程(天) | 中转/直达 | 备注       |\n|--------|--------------|--------|-----------------|-----------|--------------|--------------|----------|------------|------------|\n| CMA    | QINGDAO,SHANDONG | ADEN   | CMA CGM GUILD   | 0RDLM1MA  | 2025-07-05 00:00:00 | 2025-07-28 00:00:00 | <span style=\"color:green\">23（当前周）</span> | 直达       |            |\n\n**2025-07-07（周一）**\n\n| 船公司 | 起运港       | 目的港 | 船名/航次       | 航次    | 预计离港时间 | 预计到港时间 | 航程(天) | 中转/直达 | 备注       |\n|--------|--------------|--------|-----------------|---------|--------------|--------------|----------|------------|------------|\n| PEAK   | QINGDAO,SHANDONG | ADEN   | 长荣           | 长荣    | 2025-07-07 00:00:00 | 2025-08-02 00:00:00 | 26       | 中转       | PEAK      |\n| MSC    | QINGDAO,SHANDONG | ADEN   | MSC GAYANE      | QI527A  | 2025-07-07 01:00:00 | 2025-08-26 02:00:00 | 50       | 直达       |            |\n| PIL    | QINGDAO,SHANDONG | ADEN   | KOTA PLUMBAGO   | 0008W   | 2025-07-07 11:00:00 | 2025-09-05 00:00:00 | 60       | 直达       |            |\n\n**2025-07-08（周二）**\n\n| 船公司 | 起运港       | 目的港 | 船名/航次       | 航次    | 预计离港时间 | 预计到港时间 | 航程(天) | 中转/直达 | 备注       |\n|--------|--------------|--------|-----------------|---------|--------------|--------------|----------|------------|------------|\n| CUL    | QINGDAO,SHANDONG | ADEN   | CUL BANGKOK     | 2528W   | 2025-07-08 00:00:00 | 2025-08-28 05:30:00 | 51       | 直达       |            |\n\n备注：\n- 航程最短：CMA CGM GUILD，航程 <span style=\"color:green\">23（当前周）</span> 天。\n- 最早离港：HMM BANGKOK，预计离港时间 <span style=\"color:red\">2025-07-03 04:00:00（当前周）</span>",
+    "message_files": null,
+    "message_time": 1751530075,
+    "sources": null,
+    "like": null,
+    "user_feedback": null,
+    "active": true,
+    "qa": 1,
+    "attachment": [],
+    "chains": [
+        {
+            "command": "startup-startup",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "",
+            "record_index": 0,
+            "data": "startup",
+            "type": "process"
+        },
+        {
+            "command": "inference-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "de3963c3-3961-4b4b-9e82-22b5c9a8776e",
+            "record_index": 1,
+            "data": "查询中...",
+            "type": "process"
+        },
+        {
+            "command": "inference-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "de3963c3-3961-4b4b-9e82-22b5c9a8776e",
+            "record_index": 2,
+            "data": "查询成功：船期",
+            "type": "process"
+        },
+        {
+            "command": "run-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "fa825807-d227-4582-80ff-1f1cb421d868",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配中...\"}",
+            "type": "process"
+        },
+        {
+            "command": "run-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "fa825807-d227-4582-80ff-1f1cb421d868",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配成功：起运港\"}",
+            "type": "process"
+        },
+        {
+            "command": "calltool-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "e2281efe-73ff-4af1-b05e-bd59fee026fb",
+            "record_index": 3,
+            "data": "调用工具处理数据",
+            "type": "process"
+        },
+        {
+            "command": "calltool-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "e2281efe-73ff-4af1-b05e-bd59fee026fb",
+            "record_index": 4,
+            "data": "工具调用成功：llm查询完成，返回结果解析成功：船名航次",
+            "type": "process"
+        },
+        {
+            "command": "run-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "633957a7-fd8d-49f0-9a0a-ce70a8eb8085",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配中...\"}",
+            "type": "process"
+        },
+        {
+            "command": "run-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "633957a7-fd8d-49f0-9a0a-ce70a8eb8085",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配成功：# 条件判断逻辑\\ncond = data['result'] == '船名航次'\\ncond = data['result'] == '船名航次'\"}",
+            "type": "process"
+        },
+        {
+            "command": "calltool-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "10dcbc56-43f8-4bff-b59c-bfd65c2411a9",
+            "record_index": 5,
+            "data": "起运港/目的港查询中...",
+            "type": "process"
+        },
+        {
+            "command": "calltool-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "10dcbc56-43f8-4bff-b59c-bfd65c2411a9",
+            "record_index": 6,
+            "data": "工具调用成功：起运港/目的港查询完成，返回结果解析成功：[\"CNTAO\", \"YEADE\"]",
+            "type": "process"
+        },
+        {
+            "command": "calltool-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "29268b0f-29ff-464f-8f34-d17a9d91256b",
+            "record_index": 13,
+            "data": "查询中...",
+            "type": "process"
+        },
+        {
+            "command": "calltool-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "29268b0f-29ff-464f-8f34-d17a9d91256b",
+            "record_index": 14,
+            "data": "工具调用成功：返回结果解析成功：[\"CNTAO\", \"YEADE\"]",
+            "type": "process"
+        },
+        {
+            "command": "run-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "9d29a309-ebad-45ed-ae0e-663e8440d6fe",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配中...\"}",
+            "type": "process"
+        },
+        {
+            "command": "run-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "9d29a309-ebad-45ed-ae0e-663e8440d6fe",
+            "data": "{\"type\": \"pattern\", \"content\": \"匹配成功：cond = len(data[\\\"variables\\\"][\\\"port_code_search_result\\\"]) > 1\"}",
+            "type": "process"
+        },
+        {
+            "command": "calltool-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "f6c0dd59-2143-4f40-b910-55ef69d1ceed",
+            "record_index": 15,
+            "data": "数据处理中...",
+            "type": "process"
+        },
+        {
+            "command": "calltool-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "f6c0dd59-2143-4f40-b910-55ef69d1ceed",
+            "record_index": 16,
+            "data": "工具调用成功：返回结果解析成功：[\"CNTAO\", \"YEADE\"]",
+            "type": "process"
+        },
+        {
+            "command": "inference-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "c76f28c9-5804-4d95-b3fa-04c1b801799c",
+            "record_index": 17,
+            "data": "船期数据解析中...",
+            "type": "process"
+        },
+        {
+            "command": "inference-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "c76f28c9-5804-4d95-b3fa-04c1b801799c",
+            "record_index": 18,
+            "data": "解析成功：{\n  \"polCode\": \"CNTAO\",\n  \"podCode\": \"YEADE\",\n  \"referenceDate\": \"2025-07-03\",\n  \"weeksOut\": \"2\",\n  \"shipCode\": \"\",\n  \"arriveType\": \"\"\n}",
+            "type": "process"
+        },
+        {
+            "command": "inference-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "78f8e622-2b51-4262-9063-24dc1a3555bd",
+            "record_index": 19,
+            "data": "生成最终结果",
+            "type": "process"
+        },
+        {
+            "command": "inference-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "78f8e622-2b51-4262-9063-24dc1a3555bd",
+            "record_index": 20,
+            "data": "生成成功：起运港(polCode)和目的港(podCode)数据整合完成。",
+            "type": "process"
+        },
+        {
+            "command": "calltool-before",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "43a5f0c7-3f68-435e-8cb7-49f869764749",
+            "record_index": 35,
+            "data": "调用llm查询中...",
+            "type": "process"
+        },
+        {
+            "command": "calltool-after",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "43a5f0c7-3f68-435e-8cb7-49f869764749",
+            "record_index": 36,
+            "data": "工具调用成功：llm查询完成，返回结果解析成功：船名航次",
+            "type": "process"
+        },
+        {
+            "command": "finished-completed",
+            "chat_id": "f92131b0-2dc2-4352-8ead-d6b2b4989c5a",
+            "node_id": "fa65e221-a7eb-4083-80db-30bee2e4eea8",
+            "record_index": 37,
+            "data": "completed",
+            "type": "process"
+        }
+    ],
+    "is_reference_source_visible": true,
+    "children": null,
+    "status": 10,
+    "extra": null
+}
