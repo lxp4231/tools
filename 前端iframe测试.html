@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://test-tracking.4portun.com/sgld.umd.min.js?appId=openapitest&version=1.0.3"></script>
+</head>
+
+<body>
+    <div id="trackingMap" style="width: 100vw;height: 100vh"></div>
+    <script>
+        Sgld.createTrackingBySubscriptionId({
+            id: 'trackingMap', //确保容器已加载
+            token: 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvcGVuYXBpdGVzdCIsImlhdCI6MTc2NjkzNzc3MCwiZXhwIjoxNzY3MDI0MTcwfQ.Tw3mrMEKoLZ2pOsPs7rmXjJ-EIcgNFD2j3tiocwfkJ8', //必填
+            appId: 'openapitest',
+            subscriptionId: 'bf7ec504b295b3d13c4332bf917b26ca' //订阅id
+        });
+    </script>
+</body>
+
+</html>
