@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./public/favicon.ico" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <meta name="description"
+        content="四港物流宝提供全球60余家船公司集装箱跟踪及船期ETA跟踪,6000万集装箱货物港到港跟踪.支持箱号/提单号/订舱号/航司单号查询.提供开放式API接口,快速实现可视化系统集成方案" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="浙江四港联动发展有限公司" />
+    <meta name="baidu-site-verification" content="codeva-karkLfbCaw" />
+    <title>四港物流宝|全球海运查询，海运跟踪，集装箱跟踪，船舶轨迹，港区查询，陆运轨迹，API接口</title>
+    <meta name="keywords" content="船舶轨迹，全球船期，海关跟踪，API接口，港区查询，空运跟踪" />
+    <style>
+        html,
+        body,
+        #app {
+            height: 100%;
+        }
+
+        html.ssg-fallback-pending #app {
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        ; (function () {
+            var pathname = window.location.pathname.replace(/\/+$/, '') || '/'
+            var hasLoginToken = false
+            try {
+                hasLoginToken =
+                    /(?:^|;\s*)userCenter_token_access=/.test(document.cookie) ||
+                    !!window.localStorage.getItem('userCenter_token_access')
+            } catch (e) { }
+            if (pathname !== '/' || hasLoginToken) {
+                document.documentElement.classList.add('ssg-fallback-pending')
+            }
+        })()
+    </script>
+    <script>
+        var _hmt = _hmt || []
+            ; (function () {
+                var hm = document.createElement('script')
+                hm.src = 'https://hm.baidu.com/hm.js?8b7c3b4f32a64969dc9e61e8466f4879'
+                var s = document.getElementsByTagName('script')[0]
+                s.parentNode.insertBefore(hm, s)
+            })()
+    </script>
+    <script>
+            ; (function (w, d, t, r, u) {
+                var f, n, i
+                    ; (w[u] = w[u] || []),
+                        (f = function () {
+                            var o = { ti: '97167232', enableAutoSpaTracking: true }
+                                ; (o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad')
+                        }),
+                        (n = d.createElement(t)),
+                        (n.src = r),
+                        (n.async = 1),
+                        (n.onload = n.onreadystatechange =
+                            function () {
+                                var s = this.readyState
+                                    ; (s && s !== 'loaded' && s !== 'complete') ||
+                                        (f(), (n.onload = n.onreadystatechange = null))
+                            }),
+                        (i = d.getElementsByTagName(t)[0]),
+                        i.parentNode.insertBefore(n, i)
+            })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq')
+    </script>
+    <script>
+        function uet_report_conversion() {
+            window.uetq = window.uetq || []
+            window.uetq.push('event', 'register', {})
+        }
+    </script>
+    <script src="/libs/tac/load.min.js"></script>
+    <script src="/sg-monitor.min.js"></script>
+    <script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=3.0&type=webgl&ak=b6RGIntfZQlX5lBSOHXn5W6Xyb1uvR1y"></script>
+    <script src="/coordtransform.js"></script>
+    <script src=" https://analytics.ahrefs.com/analytics.js " data-key="t/PczJ62qtZID2FvmctjPQ" async></script>
+</head>
+
+<body>
+    <!--[if lt IE 11]> 请更新浏览器<a href="https://www.google.cn/intl/zh-CN/chrome/">点击下载</a> <![endif]-->
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
